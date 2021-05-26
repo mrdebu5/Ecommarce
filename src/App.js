@@ -1,10 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import UserHome from './Containers/User';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      THis is create react app teamplate
-    </div>
+    <React.Fragment>
+      <Switch>
+        <Route
+          path='/'
+          render={({ match: { url } }) => (
+            <>
+              <Route exact path={`${url}/`} component={UserHome} />
+            </>
+          )}
+        />
+        {/* <Route
+          path='/admin'
+          render={({ match: { url } }) => (
+            <>
+              <Route exact path={`${url}/`} component={AdminHome} />
+            </>
+          )}
+        /> */}
+        {/* <Route component={NotFound} /> */}
+      </Switch>
+    </React.Fragment>
   );
 }
 
