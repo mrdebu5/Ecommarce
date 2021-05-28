@@ -27,6 +27,7 @@ const App = () => {
           )}
         /> */}
         {/* <Route component={NotFound} /> */}
+        <Redirect to="/user" />
       </Switch>
     </React.Fragment>
   );
