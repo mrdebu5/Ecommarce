@@ -10,7 +10,7 @@ const App = () => {
           path='/user'
           render={({ match: { url } }) => (
             <>
-              <Route exact path={`${url}`} 
+              <Route path={`${url}`} 
                 render={({ match:{url} })=>(
                   <UserHome  url = {url}/>
                 )}
@@ -27,6 +27,7 @@ const App = () => {
           )}
         /> */}
         {/* <Route component={NotFound} /> */}
+        <Redirect to="/user" />
       </Switch>
     </React.Fragment>
   );
