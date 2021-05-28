@@ -1,9 +1,12 @@
 import React from 'react'
+import Carousel from "./Home/carousel/Carousel";
 
 const HomePage = () => {
+    alert("THis is home page")
     return (
         <div>
-            <h1>Home Page</h1>
+        This is gome page
+            <Carousel/>
         </div>
     )
 }

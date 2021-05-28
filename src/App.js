@@ -7,10 +7,14 @@ const App = () => {
     <React.Fragment>
       <Switch>
         <Route
-          path='/'
+          path='/user'
           render={({ match: { url } }) => (
             <>
-              <Route exact path={`${url}/`} component={UserHome} />
+              <Route exact path={`${url}`} 
+                render={({ match:{url} })=>(
+                  <UserHome  url = {url}/>
+                )}
+              />
             </>
           )}
         />
