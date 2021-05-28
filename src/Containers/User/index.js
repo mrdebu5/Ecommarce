@@ -3,12 +3,11 @@ import { Route } from 'react-router-dom'
 import HomePage from './HomePage';
 import Login from './login/Loing';
 
-const UserHome = (url) => {
-    alert(url)
-    return (
+const UserHome = (props) => {
+     return (
         <>
-            <Route exact path={`/user/`} component={HomePage} />
-            <Route exact path={`/user/login`} component={Login}  />
+            <Route exact path={`${props.url}/`} component={HomePage} />
+            <Route exact path={`${props.url}/login`} component={Login}  />
         </>
     )
 }
